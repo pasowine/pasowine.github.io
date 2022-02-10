@@ -227,6 +227,12 @@ input, select, textarea {
 			font-size: 1.25em;
 		}
 
+
+	div.shadow {
+		/*qq*/
+		box-shadow: 40px -40px 0px 0px #FDBB2F;
+		}
+
 /* Container */
 
 	.container {
@@ -1634,7 +1640,7 @@ input, select, textarea {
 	}
 
 		.image img {
-			/*display: block;*/
+			display: block;
 			width: 100%;
 		}
 
