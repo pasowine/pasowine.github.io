@@ -22,9 +22,79 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="next" href="https://pasowinestorage.com/#contact">
 	<link rel="stylesheet" href="assets/css/main.css" />
+	
+	<style>
+.sign-in-wrapper {
+    background: none repeat scroll 0 0 #CCCCCC;
+    display: none;
+   /* overflow: hidden; */
+}
+.sign-in {
+   /* color: #999999; */
+    color: #111111;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.sign-in:hover {
+    color: #999999;
+}
+.sign-in span {
+    display: inline-block;
+    height: 16px;
+    overflow: hidden;
+    width: 18px;
+}
+.sign-in.open span {
+    background-position: left bottom;
+}
+.sign-in-dropdown {
+    color: #000000;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px;
+    width: 940px;
+}
+#sign-in-form {
+    float: right;
+}
+#sign-in-form b {
+    padding: 0 5px 0 10px;
+}
+#sign-in-form input[type="submit"] {
+    background: none repeat scroll 0 0 #000000;
+    border: 0 none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    margin-left: 5px;
+	margin-top: 5px;
+    padding: 5px 10px;
+}
+#sign-in-form input[type="text"], #sign-in-form input[type="password"] {
+    width: 200px;
+}
+#sign-in-link {
+    float: right;
+    padding: 27px;
+    margin-left: 200px;
+}
+</style>
 </head>
 <body class="is-preload">
-
+<div class="sign-in-wrapper">
+	        <div class="sign-in-dropdown">
+	            <form name="login" id="sign-in-form" 
+						 action="https://fort.pasowinestorage.com/index2.cfm" 
+					method="POST">
+	                <input type="hidden" name="thisaction" id="thisaction" value="">
+	                <b>User Name:</b>
+	                <input type="Text" name="UserName" size="41" class="forminput1" value="">
+	                <b>Password:</b>
+	                <input type="password" name="pwd" size="41" class="forminput1">
+	                <input type="submit" value="Sign In" name="login" border="0">
+	            </form>
+	        </div>
+	    </div>
+<div id="sign-in-link"><a class="sign-in" url="#top">Sign in</a> </div> 
 	<!-- Nav -->
 	<nav id="nav">
 		<ul class="container">
@@ -248,6 +318,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">
 
+			jQuery( document ).ready(function() {
+				jQuery( ".sign-in" ).click(function() { 
+					jQuery( ".sign-in-wrapper" ).show();
+				});
+			});
+</script>
 		</body>
 		</html>
