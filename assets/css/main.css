@@ -2506,3 +2506,84 @@ input, select, textarea {
 					}
 
 	}
+
+
+
+/* Our Partners Section */
+#partners {
+    padding: 6em 0; /* Adjust padding as needed */
+    background-color: #f8f8f8; /* Light background for contrast */
+    text-align: center;
+}
+
+#partners header h2 {
+    color: #333; /* Darker heading for readability */
+    margin-bottom: 2em;
+}
+
+.logo-carousel-container {
+    overflow: hidden; /* Hides the overflowing parts of the carousel */
+    white-space: nowrap; /* Keeps all images on one line */
+    position: relative;
+    padding: 2em 0; /* Add some vertical padding around the carousel */
+}
+
+.logo-carousel {
+    display: inline-block; /* Allows items to flow horizontally */
+    animation: carousel-scroll 30s linear infinite; /* Adjust time for speed */
+    /* Adjust width to ensure all initial and duplicated logos fit before looping */
+    width: 200%; /* If you have 9 logos and duplicate them, you need at least 200% to fit 18 */
+}
+
+.logo-carousel img {
+    height: 80px; /* Adjust logo height as needed */
+    width: auto; /* Maintain aspect ratio */
+    margin: 0 40px; /* Spacing between logos */
+    vertical-align: middle;
+    filter: grayscale(100%); /* Black and white effect */
+    opacity: 0.7; /* Slightly faded */
+    transition: opacity 0.3s ease-in-out; /* Smooth hover effect */
+    max-width: 150px; /* Max width for individual logos */
+    display: inline-block; /* Ensure images are in a line */
+}
+
+.logo-carousel img:hover {
+    opacity: 1; /* Full opacity on hover */
+    filter: grayscale(0%); /* Color on hover (optional, remove if you want strict B&W) */
+}
+
+/* Keyframes for the carousel animation */
+@keyframes carousel-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Scrolls half the width to loop seamlessly */
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 980px) {
+    #partners {
+        padding: 4em 0;
+    }
+    .logo-carousel img {
+        height: 60px; /* Smaller logos on tablets */
+        margin: 0 25px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #partners {
+        padding: 3em 0;
+    }
+    .logo-carousel img {
+        height: 50px; /* Even smaller logos on mobile */
+        margin: 0 15px;
+    }
+    /* Adjust animation speed for smaller screens if logos appear too fast */
+    @keyframes carousel-scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+}
