@@ -1706,6 +1706,27 @@ input, select, textarea {
 				width: auto;
 			}
 
+	.banner-image {
+            width: 100%;
+
+            /* 2. Define the banner's height. 
+               Using viewport height (vh) makes it responsive. 
+               30vh means 30% of the viewport's height. */
+            height: 30vh; 
+
+            /* 3. This is the magic property for cropping.
+               'cover' scales the image to fill the container, maintaining aspect ratio,
+               and crops whatever doesn't fit. */
+            object-fit: cover;
+
+            /* 4. This ensures the *middle* of the image is always visible.
+               You could use 'top center' or 'bottom center' if you wanted a different part. */
+            object-position: center; 
+            
+            /* Optional: Adds rounded corners for a softer look */
+            border-radius: 8px;
+        }
+
 /* Button */
 
 	input[type="button"],
@@ -2587,3 +2608,6 @@ input, select, textarea {
         100% { transform: translateX(-50%); }
     }
 }
+
+
+
